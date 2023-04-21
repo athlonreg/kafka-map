@@ -15,7 +15,7 @@ function env() {
             wsPrefix = 'ws:'
         }
         return {
-            server: '',
+            server: '/kafka-map',
             wsServer: wsPrefix + window.location.host,
             prefix: window.location.protocol + '//' + window.location.host,
         }

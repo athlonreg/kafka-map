@@ -16,6 +16,7 @@ import request from "./common/request";
 import {
     GithubOutlined
 } from '@ant-design/icons';
+import {server} from "./common/env";
 
 const {Header, Content, Footer} = Layout;
 
@@ -75,7 +76,7 @@ class App extends Component {
 
         const langItems = [
             {
-                label: <a href="/#" onClick={() => {
+                label: <a href={`${server}/#`} onClick={() => {
                     this.setLocale('zh-cn');
                 }}>
                     简体中文
@@ -83,7 +84,7 @@ class App extends Component {
                 key: 'zh-cn'
             },
             {
-                label: <a href="/#" onClick={() => {
+                label: <a href={`${server}/#`} onClick={() => {
                     this.setLocale('en-us');
                 }}>
                     English
@@ -100,7 +101,7 @@ class App extends Component {
                 key: 'info'
             },
             {
-                label: <a href="/#" onClick={() => {
+                label: <a href={`${server}/#`} onClick={() => {
                     this.logout();
                 }}>
                     <FormattedMessage id="logout"/>

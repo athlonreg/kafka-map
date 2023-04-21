@@ -15,7 +15,7 @@ const handleError = (error) => {
         return false;
     }
     if (error.response !== undefined && error.response.status === 401) {
-        window.location.href = '#/login';
+        window.location.href = `${server}/#/login`;
         console.log('')
         return false;
     }
@@ -30,7 +30,7 @@ const handleError = (error) => {
 
 const handleResult = (result) => {
     if (result['code'] === 401) {
-        window.location.href = '#/login';
+        window.location.href = `${server}/#/login`;
         return false;
     }
     return true;
