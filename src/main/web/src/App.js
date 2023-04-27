@@ -25,6 +25,7 @@ import {
     GithubOutlined
 } from '@ant-design/icons';
 import Info from "./components/Info";
+import { server } from "./common/env";
 
 const {Header, Content, Footer} = Layout;
 
@@ -85,14 +86,14 @@ class App extends Component {
         const menu = (
             <Menu>
                 <Menu.Item>
-                    <a href="/#" onClick={() => {
+                    <a href={`${server}/#`} onClick={() => {
                         this.setLocale('zh-cn');
                     }}>
                         简体中文
                     </a>
                 </Menu.Item>
                 <Menu.Item>
-                    <a href="/#" onClick={() => {
+                    <a href={`${server}/#`} onClick={() => {
                         this.setLocale('en-us');
                     }}>
                         English
@@ -109,7 +110,7 @@ class App extends Component {
                     </Link>
                 </Menu.Item>
                 <Menu.Item>
-                    <a href="/#" onClick={() => {
+                    <a href={`${server}/#`} onClick={() => {
                         this.logout();
                     }}>
                         <FormattedMessage id="logout"/>

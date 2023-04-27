@@ -2,8 +2,8 @@ function env() {
     if (process.env.REACT_APP_ENV === 'development') {
         // 本地开发环境
         return {
-            server: '//127.0.0.1:8080',
-            wsServer: 'ws://127.0.0.1:8080',
+            server: '//127.0.0.1:8080/kafka-map',
+            wsServer: 'ws://127.0.0.1:8080/kafka-map',
             prefix: '',
         }
     } else {
@@ -15,7 +15,7 @@ function env() {
             wsPrefix = 'ws:'
         }
         return {
-            server: '',
+            server: '/kafka-map',
             wsServer: wsPrefix + window.location.host,
             prefix: window.location.protocol + '//' + window.location.host,
         }

@@ -4,6 +4,7 @@ import './Login.css'
 import request from "../common/request";
 import {withRouter} from "react-router-dom";
 import {LockOutlined, UserOutlined} from '@ant-design/icons';
+import {server} from "../common/env";
 
 const {Title} = Typography;
 
@@ -36,7 +37,7 @@ class LoginForm extends Component {
             // 跳转登录
             localStorage.setItem('X-Auth-Token', result['token']);
             // this.props.history.push();
-            window.location.href = "/"
+            window.location.href = `${server}/`
         } finally {
             this.setState({
                 inLogin: false
