@@ -8,6 +8,8 @@ spring:
     show-sql: true
 server:
   port: 8080
+  servlet:
+    context-path: /kafka-map
 
 default:
   # 初始化安装时的账号
